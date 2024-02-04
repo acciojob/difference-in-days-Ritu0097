@@ -1,11 +1,11 @@
 var dateDiffInDays = function (date1, date2) {
 	let d1=new Date(date1);
 	let d2=new Date(date2);
-	if(d1==d2){
+	if(d1.getTime()===d2.getTime()){
 		return 0;
 	}
 	else{
-		return d2-d1;
+		return Math.floor(d2-d1);
 	}
 };
 
